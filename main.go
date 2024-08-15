@@ -6,5 +6,9 @@ import (
 
 
 func main() {
-	myservice.Jump()
+	flist := myservice.Collection()
+	for len(flist) > 0 {
+		flist = myservice.Jump(flist)
+	}
+
 }
